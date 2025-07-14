@@ -14,6 +14,8 @@ def test_capitalize_negative():
     assert utils.capitalize("") == ""
     assert utils.capitalize(" ") == " "
     assert utils.capitalize("123abc") == "123abc"
+    assert utils.capitalize("None") == "None"
+
 
 
 def test_trim_positive():
@@ -38,6 +40,7 @@ def test_contains_negative():
     assert utils.contains("SkyPro", "U") is False
     assert utils.contains("Hello world", "1") is False
     assert utils.contains("Python", "  ") is False
+    assert utils.contains("", "Python") is False
 
 
 def test_delete_symbol_positive():
@@ -50,3 +53,4 @@ def test_delete_symbol_negative():
     assert utils.delete_symbol("SkyPro", "z") == "SkyPro"
     assert utils.delete_symbol("", "k") == ""
     assert utils.delete_symbol("SkyPro", "123") == "SkyPro"
+    assert utils.delete_symbol("Python", "") == "Python"
