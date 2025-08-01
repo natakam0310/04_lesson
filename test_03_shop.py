@@ -77,4 +77,3 @@ def test_form_validation(driver):
         f"Итоговая сумма составляет ${total_value:.2f}, "
         f"ожидалось ${expected_total:.2f}"
     )
-
